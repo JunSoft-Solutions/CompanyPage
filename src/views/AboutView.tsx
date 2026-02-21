@@ -10,10 +10,11 @@ export interface AboutViewProps {
   mission: string;
   story: string;
   values: string[];
+  contactEmail: string;
   founders: Founder[];
 }
 
-function AboutView({ companyName, mission, story, values, founders }: AboutViewProps) {
+function AboutView({ companyName, mission, story, values, contactEmail, founders }: AboutViewProps) {
   return (
     <main className="page about-page">
       <section className="about-content">
@@ -28,6 +29,14 @@ function AboutView({ companyName, mission, story, values, founders }: AboutViewP
             <li key={value}>{value}</li>
           ))}
         </ul>
+
+        <section className="contact-section">
+          <h2>Contact</h2>
+          <p className="contact-description">Have questions or want to partner with us? We’d love to hear from you.</p>
+          <p className="contact-email">
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+          </p>
+        </section>
 
         <section className="founders-section">
           <h2>Meet the Founders</h2>
