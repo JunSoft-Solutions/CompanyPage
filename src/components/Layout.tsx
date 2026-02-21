@@ -39,6 +39,9 @@ function Layout({ children }: LayoutProps) {
           <NavLink to="/about" onClick={closeMenu}>
             About Us
           </NavLink>
+          <NavLink to="/projects" onClick={closeMenu}>
+            Projects
+          </NavLink>
         </nav>
         {menuOpen && (
           <div
@@ -53,7 +56,7 @@ function Layout({ children }: LayoutProps) {
       </header>
       {children}
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Junsoft Solutions. All rights reserved.</p>
+        <p> Junsoft Solutions. EST 2024.</p>
       </footer>
     </div>
   );

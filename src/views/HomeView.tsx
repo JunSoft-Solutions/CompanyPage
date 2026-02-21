@@ -14,9 +14,11 @@ function HomeView({ companyName, tagline, description }: HomeViewProps) {
   return (
     <main className="page home-page">
       <section className="hero">
-        <h1>{companyName}</h1>
-        <p className="tagline">{tagline}</p>
-        <p className="description">{description}</p>
+        <div className="hero-content">
+          <h1>{companyName}</h1>
+          <p className="tagline">{tagline}</p>
+          <p className="description">{description}</p>
+        </div>
       </section>
     </main>
   );
