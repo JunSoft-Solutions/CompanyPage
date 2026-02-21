@@ -216,6 +216,73 @@ body {
   padding-left: 1.5rem;
 }
 
+/* Meet the Founders */
+.founders-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(44, 95, 52, 0.2);
+}
+
+.founders-section h2 {
+  margin-bottom: 1.25rem;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(44, 95, 52, 0.06);
+  border-radius: 12px;
+}
+
+.founder-card:last-child {
+  margin-bottom: 0;
+}
+
+.founder-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #2C5F34;
+  flex-shrink: 0;
+}
+
+.founder-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #2C5F34;
+}
+
+.founder-role {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #262722;
+}
+
+.founder-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #482e1d;
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .founder-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .founder-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 @media (min-width: 768px) {
   .about-content h2 {
     font-size: 1.25rem;
@@ -224,6 +291,11 @@ body {
   .about-content p,
   .about-content ul {
     font-size: 1rem;
+  }
+
+  .founder-image {
+    width: 160px;
+    height: 160px;
   }
 }
 

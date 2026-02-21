@@ -14,6 +14,7 @@ function AboutController() {
       mission={about.mission}
       story={about.story}
       values={about.values}
+      founders={about.founders}
     />
   );
 }
