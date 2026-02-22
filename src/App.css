@@ -479,6 +479,101 @@ body {
   }
 }
 
+/* Partners page – gallery */
+.partners-content h1 {
+  margin-top: 0;
+  color: #2C5F34;
+  font-family: 'Montserrat_Alternates-BoldItalic', sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.partners-intro {
+  margin: 0 0 1.5rem;
+  color: #482e1d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: 'Lato-Regular', sans-serif;
+  text-align: center;
+}
+
+.partners-gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(44, 95, 52, 0.2);
+}
+
+.partner-image-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: opacity 0.2s;
+  background-image: url(/public/images/texture.jpg);
+}
+
+.partner-image-link:hover {
+  opacity: 0.85;
+}
+
+.partner-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+}
+
+.partner-name-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2C5F34;
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+.partner-name-link:hover {
+  color: #262722;
+  text-decoration: underline;
+}
+
+.partner-description {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  color: #482e1d;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .partners-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+
+  .partner-card {
+    padding: 1.25rem;
+  }
+
+  .partner-name-link {
+    font-size: 1rem;
+  }
+}
+
 /* Contact */
 .contact-section {
   margin-top: 2rem;

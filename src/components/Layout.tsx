@@ -42,6 +42,9 @@ function Layout({ children }: LayoutProps) {
           <NavLink to="/projects" onClick={closeMenu}>
             Projects
           </NavLink>
+          <NavLink to="/partners" onClick={closeMenu}>
+            Partners
+          </NavLink>
         </nav>
         {menuOpen && (
           <div

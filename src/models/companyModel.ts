@@ -24,6 +24,14 @@ export interface Project {
   description: string;
 }
 
+export interface Partner {
+  id: string;
+  name: string;
+  image: string;
+  url: string;
+  description: string;
+}
+
 export interface CompanyModel {
   name: string;
   tagline: string;
@@ -31,6 +39,7 @@ export interface CompanyModel {
   contactEmail: string;
   about: CompanyAbout;
   projects: Project[];
+  partners: Partner[];
 }
 
 export const companyModel: CompanyModel = {
@@ -70,17 +79,26 @@ export const companyModel: CompanyModel = {
     {
       id: 'foodie_diva',
       name: 'Foodie Diva',
-      description: 'You ever go out and think "I wish there was a food truck near me?" Look no further! Foodie Diva is here to provide you with a list of food trucks near you.',
+      description: 'She’s an icon. She’s the moment. Foodie Diva is the app that brings food trucks and their hungry patrons together—on mobile and on the web. Whether you’re on your phone hunting for the nearest truck or at your laptop planning your next bite, she’s there to connect you with the best street food around. One platform, every device, and one mission: uniting food trucks with the people who love them.',
     },
     {
-      id: 'project-2',
-      name: 'Project Two',
-      description: 'An internal tool and integration platform that connects existing systems and automates workflows. We are delivering both the initial build and long-term software support to ensure continued success and growth.',
+      id: 'yggdrasil',
+      name: 'Yggdrasil',
+      description: 'An application for the creation and management of tabletop roleplaying games. From character creation to campaign management. Build worlds that grow with you. Connect to players from all over the world to share stories. All without the need of a forest worths of papers.',
     },
     {
-      id: 'project-3',
-      name: 'Project Three',
-      description: 'A mobile-friendly SaaS product that helps teams collaborate and track progress. We are working closely with the client to refine features and provide reliable support as their needs evolve.',
+      id: 'shop_manager',
+      name: 'Shop Manager',
+      description: 'A web base service to allow easy check in, repair, and billing for small auto repair shops.',
+    },
+  ],
+  partners: [
+    {
+      id: 'diekmeyer_designs',
+      name: 'Diekmeyer Designs',
+      image: '/images/logo.png',
+      url: 'https://diekmeyerdesigns.com',
+      description: 'Redesigned a stacked sales site for a small family owned custom jewelry business into a dynamic gallery view of the intricate jewlery designs working in a style that would match the artistry of the jewlery.',
     },
   ],
 };
