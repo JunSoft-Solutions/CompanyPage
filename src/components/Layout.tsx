@@ -3,7 +3,7 @@
  * Hamburger menu for mobile-friendly navigation.
  */
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -11,6 +11,8 @@ export interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isProjectsPage = location.pathname === '/projects';
 
   const closeMenu = (): void => setMenuOpen(false);
 
@@ -57,7 +59,9 @@ function Layout({ children }: LayoutProps) {
           />
         )}
       </header>
-      {children}
+      <div className={isProjectsPage ? 'background background--projects' : 'background'}>
+        {children}
+      </div>
       <footer className="site-footer">
         <p> Junsoft Solutions. EST 2024.</p>
       </footer>
